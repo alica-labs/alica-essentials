@@ -1,8 +1,7 @@
-# coala
-*.orig
-*.user
-
 # Ignore CLion project and build folders
 **/.idea
 **/cmake-build-debug
+
+# Ignore Meson builddirs
+# **/builddir
 
