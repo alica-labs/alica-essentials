@@ -3,5 +3,5 @@
 **/cmake-build-debug
 
 # Ignore Meson builddirs
-# **/builddir
+**/builddir
 
