@@ -40,10 +40,9 @@ build_args += [
   '-DPROJECT_VERSION=' + meson.project_version(),
 ]
 
-project_target = shared_library(
+project_target = library(
   meson.project_name(),
   project_source_files,
-  install : false,
   c_args : build_args,
   include_directories : public_headers,
   dependencies : uuid
@@ -57,7 +56,8 @@ project_target = shared_library(
 # Make this library usable as a Meson subproject.
 project_dep = declare_dependency(
   include_directories: public_headers,
-  link_with : project_target
+  link_with : project_target,
+  version : meson.project_version(),
 )
 set_variable(meson.project_name() + '_dep', project_dep)
 
