@@ -1,6 +1,7 @@
 # Ignore CLion project and build folders
 **/.idea
 **/cmake-build-debug
+**/.vscode
 
 # Ignore Meson builddirs
 **/builddir
