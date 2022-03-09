@@ -2,7 +2,3 @@
 **/.idea
 **/cmake-build-debug
 **/.vscode
-
-# Ignore Meson builddirs
-**/builddir
-
