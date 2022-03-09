@@ -1,6 +1,6 @@
 project('id_manager', 'cpp',
   version : '0.0.0',
-  license : 'MPLv2')
+  license : 'MPL-2.0')
 
 project_description = 'A library to manage arbitrary kind of ids within your application.'
 
@@ -59,12 +59,10 @@ project_dep = declare_dependency(
   link_with : project_target,
   version : meson.project_version(),
 )
-set_variable(meson.project_name() + '_dep', project_dep)
+meson.override_dependency(meson.project_name(), project_dep)
 
 # ==========
 # Unit Tests
 # ==========
 
-if not meson.is_subproject()
-  subdir('tests')
-endif
+subdir('tests')
