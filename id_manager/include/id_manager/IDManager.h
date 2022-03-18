@@ -27,7 +27,7 @@ public:
     const essentials::Identifier* getIDFromBytes(const uint8_t* idBytes, int idSize, uint8_t type = Identifier::UUID_TYPE);
     template <class Prototype>
     const Identifier* getID(Prototype& idPrototype, uint8_t type = Identifier::UUID_TYPE);
-    const Identifier* generateID(int size = 16);
+    const Identifier* generateID(size_t size = 16);
     const Identifier* getWildcardID();
 private:
     std::unordered_set<const Identifier*, essentials::IdentifierHash, essentials::IdentifierEqualsComparator> ids;

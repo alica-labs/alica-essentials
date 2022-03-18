@@ -14,7 +14,7 @@ class Identifier
 
 public:
     Identifier(const std::vector<uint8_t>& idBytes);
-    Identifier(const uint8_t* idBytes, int idSize, uint8_t type = UUID_TYPE);
+    Identifier(const uint8_t* idBytes, size_t idSize, uint8_t type = UUID_TYPE);
     virtual ~Identifier();
     virtual bool operator==(const Identifier& obj) const;
     virtual bool operator!=(const Identifier& obj) const;
@@ -58,8 +58,8 @@ public:
     static const uint8_t UUID_TYPE = 1;
 
 private:
-    std::vector<uint8_t> _id;
     const uint8_t _type;
+    std::vector<uint8_t> _id;
 };
 
 struct IdentifierComparator

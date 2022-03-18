@@ -40,7 +40,7 @@ const essentials::Identifier* IDManager::getIDFromBytes(const uint8_t *idBytes, 
     return *(entry.first);
 }
 
-const essentials::Identifier* IDManager::generateID(int size)
+const essentials::Identifier* IDManager::generateID(size_t size)
 {
     uuid_t uuid; // a UUID is 16 bytes long
     if (size <= 16) {
