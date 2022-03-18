@@ -9,10 +9,10 @@ Identifier::Identifier(const std::vector<uint8_t>& idBytes)
 {
 }
 
-Identifier::Identifier(const uint8_t* idBytes, int idSize, uint8_t type)
+Identifier::Identifier(const uint8_t* idBytes, size_t idSize, uint8_t type)
         : _type(type)
 {
-    for (int i = 0; i < idSize; i++) {
+    for (size_t i = 0; i < idSize; i++) {
         _id.push_back(idBytes[i]);
     }
 }
@@ -41,7 +41,7 @@ bool Identifier::operator<(const Identifier& other) const
     } else if (_id.size() > other._id.size()) {
         return false;
     }
-    for (int i = 0; i < _id.size(); i++) {
+    for (size_t i = 0; i < _id.size(); i++) {
         if (_id[i] < other._id[i]) {
             return true;
         } else if (_id[i] > other._id[i]) {
