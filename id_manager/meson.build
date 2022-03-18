@@ -1,5 +1,6 @@
 project('id_manager', 'cpp',
   version : '0.0.0',
+  meson_version: '>=0.54.0',
   license : 'MPL-2.0')
 
 project_description = 'A library to manage arbitrary kind of ids within your application.'
